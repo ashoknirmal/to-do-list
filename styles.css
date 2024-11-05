@@ -1,0 +1,65 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://images.unsplash.com/photo-1521747116042-5a810fda9664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHRvJTIwbG9zdHxlbnwwfHx8fDE2OTAyODg4NzE&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    border: none;
+  }
+  
+  .input-group input[type="text"] {
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  button {
+    border-radius: 4px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+  }
+  
+  .list-group-item.completed {
+    text-decoration: line-through;
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .list-group-item.pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .list-group-item button {
+    margin-left: 10px;
+  }
+  
+  button.edit {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  
+  button.delete {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
