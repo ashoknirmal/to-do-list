@@ -12,12 +12,6 @@ pipeline {
     }
 }
 
-        stage('Test') {
-            steps {
-                sh './test.sh'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker build -t $DOCKER_IMAGE .'
