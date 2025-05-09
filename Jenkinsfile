@@ -7,10 +7,10 @@ pipeline {
 
     stages {
         stage('Clone') {
-            steps {
-                git 'https://github.com/ashoknirmal/to-do-list.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/ashoknirmal/to-do-list.git'
+    }
+}
 
         stage('Test') {
             steps {
