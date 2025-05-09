@@ -7,10 +7,10 @@ pipeline {
 
     stages {
         stage('Clone') {
-    steps {
-        git branch: 'main', url: 'https://github.com/ashoknirmal/to-do-list.git'
-    }
-}
+            steps {
+                git branch: 'main', url: 'https://github.com/ashoknirmal/to-do-list.git'
+            }
+        }
 
         stage('Build') {
             steps {
@@ -31,6 +31,15 @@ pipeline {
             steps {
                 sh 'docker run -d -p 8080:80 $DOCKER_IMAGE'
             }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Build and deployment successful!'
+        }
+        failure {
+            echo '❌ Pipeline failed. Check logs above.'
         }
     }
 }
